@@ -3,6 +3,15 @@
 #include <stdlib.h>
 #include <string.h>
 
+/*  Usage : this is very simple. To create a shared_ptr, you just need to
+ *  call the make_shared function with the type of your pointer, and the
+ *  number of element you want to allocate.
+ *  To pass a pointer from a function to another, there is to cases :
+ *       - From caller to callee : you just need to pass the pointer as is.
+ *       - From callee to caller : you need to return the pointer with
+ *           reference(ptr)
+ */
+
 struct meta {
     size_t count;
 };
